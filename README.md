@@ -22,7 +22,7 @@ cd WorkshopThree_February3rd2017
 + There's no encryption yet, but we'll get there.
 
 ###Branching
-+ Next we will make our own individual branches upon which we each can modify willy nilly.
++ Next we will make our own individual branches which we each can each make changes.
 
 + Start by making a new branch
 ```bash
@@ -34,19 +34,30 @@ git branch name_of_my_new_branch
 git checkout name_of_my_new_branch
 ```
 
-+ Next edit the encryption.sh file to say "Hello ACM"
++ Check to see what branch you are on
+'''bash
+git branch
+'''
+
++ Next edit the HelloWorld.sh file to tell a joke.
 ```bash
-gedit encryption.sh
+gedit HelloWorld.sh
 ```
 
 ###Add, commit, push
-+ Next, we want to add our branch to SIUC-ACM's GitHub
-+ Start by "staging" or adding the file.
++ Next, we want to add our branch with our changes to SIUC-ACM's GitHub
+
++ First push your new branch to the GitHub
 ```bash
-git add encryption.sh
+git push origin name_of_my_new_branch
 ```
 
-+ Next commit the file to your local repository
++ Then, "stage" or add your modified script file.
+```bash
+git add HelloWorld.sh
+```
+	
++ Next commit your file to your local repository
 ```bash
 git commit -m "[YOUR COMMIT MESSAGE GOES HERE]"
 ```
@@ -55,17 +66,32 @@ git commit -m "[YOUR COMMIT MESSAGE GOES HERE]"
 git config --global push.default matching
 ```
 
-+ Finally, push the file to GitHub
++ Finally, push your edited file to GitHub
 ```bash
-git push origin name_of_my_new_branch
+git push
 ```
 
 ###Merge
-+ Suppose someone else made a really cool feature on their branch, and you want that feature for your branch.
++ Suppose someone else added a really cool feature on their branch, and you want that feature for your branch.
 + This is why we use branch. We can add the changes from a different branch to our own branch without "checking out" their branch.
 
 ```bash
 git merge answer_for_one
+```
+
++ Try out the encryption script. (The password is just used for encryption/decryption)
+```bash
+./encryption.sh
+```
+
++ Checkout your new encrypted message!
+```bash
+cat encrypted_message.txt
+```
+
++ Look under the hood.
+```bash
+gedit encryption.sh
 ```
 
 ###Fork and Pull requests
