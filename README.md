@@ -105,3 +105,4 @@ gedit encryption.sh
 + Change the encryption message
 + Use a specific key for encryption to avoid typing in the password each time.
 + [insert features here]
++ Testing
